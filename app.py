@@ -18,15 +18,6 @@ def teste():
     input = request.args.get('nome', default = 'sasa', type = str)
     return '{}'.format(input.split(','))
 
-@app.route('/voz', methods=['GET'])
-def voz():
-    input = request.args.get('nome', default=' ', type=str)
-    teste = 'Olá, {}'.format(input)
-    frase = gtts.gTTS(teste, lang='pt-br')
-    frase.save('frase.mp3')
-    playsound('frase.mp3')
-    return "<h1>Olá, {} </h1>".format(input)
-
 def main():
     port = int(os.environ.get("PORT", 5000))
     print(port)   
