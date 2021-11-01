@@ -2,8 +2,6 @@ import os
 from flask import Flask
 from flask import request
 from flask_cors import CORS
-from playsound import playsound
-import gtts
 
 app = Flask(__name__)
 
