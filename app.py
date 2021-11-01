@@ -9,7 +9,7 @@ cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
 @app.route("/", methods=['GET'])
 def index():
-    return "<h1>FALA MANO </h1>"
+    return "<h1>FALA MANO, BLZ?</h1>"
 
 @app.route("/nome", methods=['GET'])
 def teste():
